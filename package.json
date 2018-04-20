@@ -30,7 +30,7 @@
     "babel-preset-stage-1": "^6.24.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server --public localhost:8081",
+    "dev": "webpack-dev-server --public localhost:8080",
     "deploy": "NODE_ENV=production webpack"
   }
 }

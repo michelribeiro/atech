@@ -1,6 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
+import { Link } from "react-router-dom";
 
-class Detail extends React.Component {
+class Detail extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,7 +10,8 @@ class Detail extends React.Component {
     return (
       <div>
         <h3>Detail</h3>
-        <a href="/#/">{"<- Home"}</a>
+        <hr />
+        <Link to="/">{"<- Home"}</Link>
       </div>
     );
   }
