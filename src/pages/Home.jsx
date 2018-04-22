@@ -1,29 +1,33 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {paths} from "../config/path"
+import Header from "../components/Header"
+import MainHome from "../components/MainHome"
 
 class Home extends Component {
   constructor(props) {
     super(props);
   }
 
-  render() {
-    
-    let path = `${paths.PATH_BASE}${paths.PATH_DISCOVER}${paths.KEY}`;
-    console.log(path)
 
+  render() {
+    const { className, list } = this.props;
+    console.log('>>>',list.results)
     return (
-      <div>
-        <h3>Home</h3>
-        <hr />
-        <Link to="/detail">Detalhe</Link>
-        {/* {
-          path.results.map((item, key) =>
-            <div key={key}>
-              <p>{item.title}</p>
-            </div>
-          )
-        } */}
+      <div className={className}>
+        <Header />
+
+        <MainHome className="home" />
+        
+
+        {/* <ol>
+          {
+            list.results.map((item, key) =>
+              <div key={key}>
+                <li>{item.title}</li>
+              </div>
+            )
+          }
+          </ol> */}
       </div>
     );
   }
