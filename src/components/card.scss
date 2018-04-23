@@ -1,34 +1,65 @@
 .card {
-    display: inline-flex;
     width: 100%;
     background: #fff;
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
 
-    @media screen and(min-width: 1024px) {
-        width: 50%;
-        justify-content: space-between;
+
+    @media screen and(min-width: 768px) {
+        width: 48%;
+        flex-direction: initial;
     }
 
-    picture {
-        width: 185px;
+    .picture {
+        width: 100%;
+        position: relative;
+        @media screen and(min-width: 1024px) {
+            width: 185px;
+        }
         a {
             img {
                 width: 100%;
+                height: 100%;
             }
-            .tooltip-box { background:blue}
+            .tooltip-box {
+                background:blue;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
         }
     }
     article {
         padding: 10px 16px 16px 16px;
+        width: 298px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
         header {
+            display: flex;
             .percent {
                 font-size: 12px;
+                width: 40px;
+                height: 40px;
+                border-radius: 21px;
+                background: #333;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .data-title {
+                margin-left: 10px;
+
                 a {
                     font-weight: 600;
                     font-size: 1.1em;
                     line-height: 1.1em;
                     color: #000;
+                    display: block;
+                    width: 100%;
                 }
                 span {
                     color: #0009;
@@ -37,20 +68,35 @@
             }
         }
         .overview {
-            margin-top: 30px;
-            p {
-                word-wrap: break-word;
-                white-space: normal;
-                color: #4d4d4d;
-                font-size: 0.9em;
-                line-height: 1.2em;
+            display: none;
+            @media screen and(min-width: 768px) {
+                display: inline;
+                margin-top: 30px;
+                p {
+                    word-wrap: break-word;
+                    white-space: normal;
+                    color: #4d4d4d;
+                    font-size: 0.9em;
+                    line-height: 1.2em;
+                }
             }
         }
         .view-more {
-            a {
-                font-size: 0.9em;
-                font-weight: 400;
-                color: #000;
+                display: none;
+            @media screen and(min-width: 768px) {
+                display: inline;
+                border-top: 1px solid #e3e3e3;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 16px;
+                width: 100%;
+
+                a {
+                    font-size: 0.9em;
+                    font-weight: 400;
+                    color: #000;
+                }
             }
         }
     }

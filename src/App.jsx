@@ -12,6 +12,7 @@ require("./scss/reset");
 require("./scss/main");
 
 class App extends Component {
+
     constructor(props) {
         super(props);
 
@@ -28,7 +29,7 @@ class App extends Component {
     }
 
     fetchApi() {
-        console.log(paths.PATH_BASE + paths.PATH_DISCOVER + paths.KEY)
+
         fetch(paths.PATH_BASE + paths.PATH_DISCOVER + paths.KEY)
         .then(response => response.json())
         .then(result => this.setApi(result))
@@ -42,16 +43,17 @@ class App extends Component {
     render() {
         const {results} = this.state;
         return (
-            <div>
             <Router>
                 <div>
                     <Route exact path="/" render={(props) => (
-                           <Home list={results} className="home" />  
+                        <Home list={results} />  
                     )} />
-                    <Route path="/detail" component={Detail} />
+                    <Route exact path="/detail" render={(props) => (
+                        <Detail />
+                    )} />
+
                 </div>
             </Router>
-            </div>
         )
     }
 }

@@ -13,14 +13,14 @@ class Card extends Component {
 
         return (
             <div className="card">
-                <picture>
+                <div className="picture">
                     <a href="#" title="titulo do filme">
                         <img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/6oNm06TPz2vGiPc2I52oXW3JwPS.jpg" alt="titulo do filme" />
                         <div className="tooltip-box">
                            tooltip
                         </div>
                     </a>
-                </picture>
+                </div>
                 <article>
                     <header>
                         <div className="percent">78%</div>
