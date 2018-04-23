@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import FormFilter from "./FormFilter";
+import ListMovies from "./ListMovies";
 
 require("./mainHome")
 
@@ -22,6 +24,8 @@ class MainHome extends Component {
                         </div>
                     </div>
                 </section>
+                <FormFilter />
+                <ListMovies />
             </main>
         )
     }

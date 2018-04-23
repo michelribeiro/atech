@@ -15,19 +15,7 @@ class Home extends Component {
     return (
       <div className={className}>
         <Header />
-
         <MainHome className="home" />
-        
-
-        {/* <ol>
-          {
-            list.results.map((item, key) =>
-              <div key={key}>
-                <li>{item.title}</li>
-              </div>
-            )
-          }
-          </ol> */}
       </div>
     );
   }
