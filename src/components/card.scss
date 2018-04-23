@@ -1,0 +1,57 @@
+.card {
+    display: inline-flex;
+    width: 100%;
+    background: #fff;
+
+    @media screen and(min-width: 1024px) {
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    picture {
+        width: 185px;
+        a {
+            img {
+                width: 100%;
+            }
+            .tooltip-box { background:blue}
+        }
+    }
+    article {
+        padding: 10px 16px 16px 16px;
+        header {
+            .percent {
+                font-size: 12px;
+            }
+            .data-title {
+                a {
+                    font-weight: 600;
+                    font-size: 1.1em;
+                    line-height: 1.1em;
+                    color: #000;
+                }
+                span {
+                    color: #0009;
+                    line-height: 1em;
+                }
+            }
+        }
+        .overview {
+            margin-top: 30px;
+            p {
+                word-wrap: break-word;
+                white-space: normal;
+                color: #4d4d4d;
+                font-size: 0.9em;
+                line-height: 1.2em;
+            }
+        }
+        .view-more {
+            a {
+                font-size: 0.9em;
+                font-weight: 400;
+                color: #000;
+            }
+        }
+    }
+}

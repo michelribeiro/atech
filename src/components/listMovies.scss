@@ -1,0 +1,9 @@
+.listCards {
+    width: 100%;
+    padding-left:15px;
+    padding-right:15px;
+    @media screen and(min-width: 1024px) {
+        width: 1000px;
+        margin: 0 auto;
+    }
+}

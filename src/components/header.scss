@@ -19,7 +19,7 @@
             display: flex;
             align-items: center;
             will-change: height;
-            @media screen and(min-width: 1024px) {
+            @media screen and(min-width: 1000px) {
                 width: 1000px;
                 margin: 0 auto;
             }
@@ -88,11 +88,15 @@
         height: 85px;
         justify-content: flex-end;
         &.small {
-            display: inline-flex;
+            display: none;
             height: auto;
             position: absolute;
             font-size: 0.75em;
             transition: opacity 1s ease;
+            
+            @media screen and(min-width: 1000px) {
+                display: inline-flex;
+            }
 
             &.right {
                 top: 0px;
