@@ -6,21 +6,25 @@ require("./header-style")
 
 
 class Header extends Component {
-    state = {
-        isTop: true
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isTop: true
+        }
     }
-    componentDidMount(){
+    componentDidMount() {
         document.addEventListener('scroll', () => {
             const isTop = window.scrollY < 2;
-            if(isTop !== this.state.isTop) {
-                this.setState({isTop})
+            if (isTop !== this.state.isTop) {
+                this.setState({ isTop })
             }
         })
     }
 
     render() {
-        
-        return(
+
+        return (
             <div className="cont-header">
                 <header className={this.state.isTop ? 'regular' : 'smaller'}>
 
@@ -57,7 +61,7 @@ class Header extends Component {
                                     <li className="user">
                                         <a href="#">
                                             <div className="avatar">
-                                                <img src="http://via.placeholder.com/32x32?text=U" alt="User"/>
+                                                <img src="http://via.placeholder.com/32x32?text=U" alt="User" />
                                             </div>
                                         </a>
                                     </li>

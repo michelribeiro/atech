@@ -51,8 +51,8 @@ class App extends Component {
                         <Route exact path="/" render={(props) => (
                             <Home list={this.state.apiResults} />
                         )} />
-                        <Route exact path="/detail" render={(props) => (
-                            <Detail />
+                        <Route exact path="/detail/:id" render={(props) => (
+                            <Detail params={props.match.params} list={this.state.apiResults} />
                         )} />
                     </div>
                 </HashRouter>

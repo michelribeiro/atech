@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import { Glyphicon } from "react-bootstrap";
 import Data from "./Data";
 import Percent from "./Percent";
+import { Link } from "react-router-dom";
 
 require("./card-style")
 
@@ -24,12 +25,12 @@ class Card extends Component {
         return (
             <div className="card">
                 <div className="picture">
-                    <a href={item.id} className={this.state.tooltipVisible ? "over" : "out"} title={item.title} onMouseEnter={this.toogleTooltip.bind(this, true)} onMouseLeave={this.toogleTooltip.bind(this, false)}>
+                    <Link to={`/detail/${item.id}`} className={this.state.tooltipVisible ? "over" : "out"} title={item.title} onMouseEnter={this.toogleTooltip.bind(this, true)} onMouseLeave={this.toogleTooltip.bind(this, false)}>
                         <img src={"https://image.tmdb.org/t/p/w370_and_h556_bestv2"+item.poster_path} alt={item.title} />
                         <div className="tooltip-box">
                            tooltip
                         </div>
-                    </a>
+                    </Link>
                 </div>
                 <article>
                     <header>
@@ -37,7 +38,7 @@ class Card extends Component {
                             <Percent item={item.vote_average} />
                         </div>
                         <div className="data-title">
-                            <a href={item.id} title={item.title}>{item.title}</a>
+                            <Link to={`/detail/${item.id}`} title={item.title}>{item.title}</Link>
                             <span>
                                 <Data data={item.release_date} />
                             </span>
@@ -47,7 +48,7 @@ class Card extends Component {
                         <p>{item.overview}</p>
                     </div>
                     <div className="view-more">
-                        <a href={item.id} title={item.title}>Mais informações</a>
+                        <Link to={`/detail/${item.id}`} title={item.title}>Mais informações</Link>
                     </div>
                 </article>
             </div>

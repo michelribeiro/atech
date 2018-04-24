@@ -7,10 +7,12 @@ class Detail extends Component {
   }
 
   render() {
+
+    console.log("PROPS INSIDE DETAIL", this.props.params.id)
+
     return (
       <div>
         <h3>Detail</h3>
-        
       </div>
     );
   }
