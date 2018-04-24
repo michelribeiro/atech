@@ -2,9 +2,17 @@ import React, { Component } from "react";
 
 class Percent extends Component {
   
+  componentDidMount(){
+    var element = document.querySelector('.chart');
+    new EasyPieChart(element, {
+    });
+  }
+
   percent() {
     return (
-      Math.floor(this.props.item * 10)+"%"
+      <div className="chart" data-percent={Math.floor(this.props.item * 10)}>
+        {Math.floor(this.props.item * 10)+"%"}
+      </div>
     )
   }
 
