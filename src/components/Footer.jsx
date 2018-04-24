@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-require('./footer')
+require('./footer-style')
 
 const Footer = () => {
     return (

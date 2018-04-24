@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import { Glyphicon } from "react-bootstrap";
 
-require("./card")
+require("./card-style")
 
 class Card extends Component {
 

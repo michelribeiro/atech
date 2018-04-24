@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Glyphicon } from "react-bootstrap";
 import Search from "./Search";
 
-require("./header")
+require("./header-style")
 
 
 class Header extends Component {

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import FormFilter from "./FormFilter";
 import ListMovies from "./ListMovies";
 
-require("./mainHome")
+require("./mainHome-style")
 
 class MainHome extends Component {
     

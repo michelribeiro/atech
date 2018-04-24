@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import { Glyphicon } from "react-bootstrap";
 import Card from "./Card";
-require("./listCards")
+require("./listCards-style")
 
 class ListMovies extends Component {
 

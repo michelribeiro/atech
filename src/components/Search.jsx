@@ -7,7 +7,7 @@ import {
     FormControl,
     InputGroup } from "react-bootstrap";
 
-require("./search")
+require("./search-style")
 
 const Search = () => {
     return (

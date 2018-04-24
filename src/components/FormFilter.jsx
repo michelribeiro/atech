@@ -5,7 +5,7 @@ import {
     FormControl
 } from "react-bootstrap";
 
-require('./formFilter')
+require('./formFilter-style')
 
 
 class FormFilter extends Component {
