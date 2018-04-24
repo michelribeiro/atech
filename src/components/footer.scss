@@ -5,7 +5,7 @@
     padding-bottom: 60px;
     height: auto;
     
-    @media screen and(min-width: 768px) {
+    @media screen and(min-width: 769px) {
 
         background-image: url('https://www.themoviedb.org/static_cache/v4/footers_v2/MrRobot-b40ea33e538ff2a92acf477a0de603681597455c74e27ccb00d9001cb08b2f72.jpg');
         height: 450px;
@@ -18,9 +18,22 @@
 
     nav {
         
-        display: inline;
+        display: inline-block;
+        padding: 0 20px;
+
+        div {
+            padding-top: 30px;
+        }
         
+        @media screen and(min-width: 769px) {
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
         @media screen and(min-width: 1024px) {
+            padding: 0;
             width: 1000px;
             margin: 0 auto;
             display: flex;
@@ -34,6 +47,12 @@
             text-transform: uppercase;
             color: #fff;
             white-space: nowrap;
+            @media screen and(min-width: 769px) {
+                font-size: 1.2em;
+            }
+            @media screen and(min-width: 1024px) {
+                font-size: 1.4em;
+            }
         }
         ul {
             li {
@@ -42,7 +61,10 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 font-size: 1.2em;
-                @media screen and(min-width: 980px) {
+                @media screen and(min-width: 769px) {
+                    font-size: 12px;
+                }
+                @media screen and(min-width: 1024px) {
                     font-size: 16px;
                 }
                 a {
@@ -54,41 +76,43 @@
             }
         }
         .join {
-                text-align: right;
                 position: relative;
+                padding-left: 10px;
                 padding-right: 10px;
-                width: 230px;
+                padding-bottom: 20px;
+                @media screen and(min-width: 769px) {
+                    text-align: right;
+                    padding-bottom: 0;
+                }
+                
             img {
                 display: none;
-                @media screen and(min-width: 1000px) {
-                    display: block;
+                @media screen and(min-width: 769px) {
+                    position: absolute;
+                    display: inline;
+                    top: 0;
+                    right: 0;
                     width:130px;
                     height:116px;
                 }
             }
-            @media screen and(min-width: 1000px) {
-                width: 230px;
-                top: -36px;
-                right: 0;
-
-            }
 
             .rounded {
-                position: relative;
-                top: 20px;
+                font-size: 18px;
                 border-color: #fff;
                 background-color: #fff;
                 color: #01d277;
-                font-size: 1.3em;
                 font-weight: bold;
-                display: inline-block;
+                position: relative;
                 word-wrap: break-word;
                 white-space: normal;
                 border: 2px solid #fff;
                 border-radius: 5px;
                 padding: 8px 16px;
-                transition: linear .1s;
-                font-size: 18px;
+                @media screen and(min-width: 769px) {
+                    display: inline-block;
+                    top: 140px;
+                }
             }
         }
     }

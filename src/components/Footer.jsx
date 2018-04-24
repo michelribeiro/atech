@@ -9,7 +9,7 @@ const Footer = () => {
           
             <div className="join">
                 <img src="https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" />
-                <a className="rounded logged_in" href="/u/michelribeiro">Olá, User name!</a>
+                <a className="rounded logged_in" href="#">Olá, User name!</a>
             </div>
                 <div>
                     <h3>O BÁSICO</h3>

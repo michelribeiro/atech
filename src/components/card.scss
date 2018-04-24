@@ -6,7 +6,12 @@
     flex-direction: column;
 
 
-    @media screen and(min-width: 768px) {
+    @media screen and(min-width: 769px) {
+        width: 100%;
+        flex-direction: initial;
+    }
+
+    @media screen and(min-width: 1024px) {
         width: 48%;
         flex-direction: initial;
     }
@@ -14,9 +19,11 @@
     .picture {
         width: 100%;
         position: relative;
-        @media screen and(min-width: 1024px) {
+
+        @media screen and(min-width: 769px) {
             width: 185px;
         }
+        
         a {
             img {
                 width: 100%;
@@ -32,10 +39,14 @@
     }
     article {
         padding: 10px 16px 16px 16px;
-        width: 298px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         position: relative;
+
+        @media screen and(min-width: 1024px) {
+            width: 298px;
+        }
 
         header {
             display: flex;
@@ -69,7 +80,7 @@
         }
         .overview {
             display: none;
-            @media screen and(min-width: 768px) {
+            @media screen and(min-width: 769px) {
                 display: inline;
                 margin-top: 30px;
                 p {
@@ -83,7 +94,7 @@
         }
         .view-more {
                 display: none;
-            @media screen and(min-width: 768px) {
+            @media screen and(min-width: 769px) {
                 display: inline;
                 border-top: 1px solid #e3e3e3;
                 position: absolute;
