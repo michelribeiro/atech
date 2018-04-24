@@ -5,7 +5,7 @@ import ListMovies from "./ListMovies";
 require("./mainHome-style")
 
 class MainHome extends Component {
-    
+
     render() {
         const {className, list} = this.props;
         return (

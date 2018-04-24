@@ -2,11 +2,17 @@ import React, {Component} from "react";
 
 class Data extends Component {
 
-  render () {
-    const {data} = this.props;
+  writeNewdate() {
+    return (
+      this.props.data
+    )
+  }
+
+  render() {
+
     return (
       <div>
-        {data} ----
+        {this.writeNewdate()}
       </div>
     )
   }

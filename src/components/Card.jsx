@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import { Glyphicon } from "react-bootstrap";
 import Data from "./Data";
+import Percent from "./Percent";
 
 require("./card-style")
 
@@ -13,6 +14,7 @@ class Card extends Component {
             tooltipVisible: false
         }
     }
+
     toogleTooltip(tooltipVisible) {
         this.setState({tooltipVisible});
     }
@@ -31,10 +33,14 @@ class Card extends Component {
                 </div>
                 <article>
                     <header>
-                        <div className="percent">{item.vote_average}%</div>
+                        <div className="percent">
+                            <Percent item={item.vote_average} />
+                        </div>
                         <div className="data-title">
-                            <a href="#" title={item.vote_average}>{item.title}</a>
-                            <span><Data data={item.release_date} /></span>
+                            <a href={item.id} title={item.title}>{item.title}</a>
+                            <span>
+                                <Data data={item.release_date} />
+                            </span>
                         </div>
                     </header>
                     <div className="overview">
