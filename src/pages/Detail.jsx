@@ -10,8 +10,7 @@ class Detail extends Component {
     return (
       <div>
         <h3>Detail</h3>
-        <hr />
-        <Link to="/">{"<- Home"}</Link>
+        
       </div>
     );
   }

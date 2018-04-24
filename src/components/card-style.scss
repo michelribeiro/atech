@@ -30,10 +30,22 @@
                 height: 100%;
             }
             .tooltip-box {
-                background:blue;
+                height: 40px;
+                background: #ffffffe6;
                 position: absolute;
                 bottom: 0;
                 width: 100%;
+            }
+
+            &.out {
+                .tooltip-box {
+                    visibility: hidden;
+                }
+            }
+            &.over {
+                .tooltip-box {
+                    visibility: visible;
+                }
             }
         }
     }
@@ -84,11 +96,17 @@
                 display: inline;
                 margin-top: 30px;
                 p {
-                    word-wrap: break-word;
                     white-space: normal;
                     color: #4d4d4d;
                     font-size: 0.9em;
                     line-height: 1.2em;
+
+                    display: block;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
         }

@@ -1,6 +1,6 @@
 
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, HashRouter } from "react-router-dom";
 
 // Components
 import Home from "./pages/Home";
@@ -17,15 +17,17 @@ class App extends Component {
         super(props);
 
         this.state = {
-            results: []
+            apiResults: {
+                results: []
+            }
         };
 
-        this.fetchApi = this.fetchApi.bind(this);
         this.setApi   = this.setApi.bind(this);
+        this.fetchApi = this.fetchApi.bind(this);
     }
 
     setApi(result) {
-        this.setState({results: result})
+        this.setState({apiResults: result})
     }
 
     fetchApi() {
@@ -37,22 +39,23 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.fetchApi(this.state.results)
+        this.fetchApi()
     }
 
     render() {
-        const {results} = this.state;
+
         return (
             <Router>
-                <div>
-                    <Route exact path="/" render={(props) => (
-                        <Home list={results} />  
-                    )} />
-                    <Route exact path="/detail" render={(props) => (
-                        <Detail />
-                    )} />
-
-                </div>
+                <HashRouter>
+                    <div>
+                        <Route exact path="/" render={(props) => (
+                            <Home list={this.state.apiResults} />
+                        )} />
+                        <Route exact path="/detail" render={(props) => (
+                            <Detail />
+                        )} />
+                    </div>
+                </HashRouter>
             </Router>
         )
     }

@@ -11,11 +11,11 @@ class Home extends Component {
 
   render() {
     const { className, list } = this.props;
-    console.log('>>>',list.results)
+    console.log('>>>',list)
     return (
       <div className={className}>
         <Header />
-        <MainHome className="home" />
+        <MainHome list={list} className="home" />
         <Footer />
       </div>
     );

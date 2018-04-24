@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import { Glyphicon } from "react-bootstrap";
 import Card from "./Card";
 require("./listCards-style")
@@ -6,14 +6,17 @@ require("./listCards-style")
 class ListMovies extends Component {
 
     render() {
-        
+        const { list } = this.props;
         return (
             <div className="listCards">
                 <div className="containerList">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    {
+                        list.results.map((item, key) => {
+                            return (
+                                <Card item={item} key={key} />
+                            )
+                        })
+                    }
                 </div>
                 <div className="pagination">
                     <p className="left">Atualmente na página: 1 de 1

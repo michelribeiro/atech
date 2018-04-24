@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import { Glyphicon } from "react-bootstrap";
+import Data from "./Data";
 
 require("./card-style")
 
@@ -7,15 +8,22 @@ class Card extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            tooltipVisible: false
+        }
+    }
+    toogleTooltip(tooltipVisible) {
+        this.setState({tooltipVisible});
     }
     
     render() {
-
+        const {item} = this.props;
         return (
             <div className="card">
                 <div className="picture">
-                    <a href="#" title="titulo do filme">
-                        <img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/6oNm06TPz2vGiPc2I52oXW3JwPS.jpg" alt="titulo do filme" />
+                    <a href={item.id} className={this.state.tooltipVisible ? "over" : "out"} title={item.title} onMouseEnter={this.toogleTooltip.bind(this, true)} onMouseLeave={this.toogleTooltip.bind(this, false)}>
+                        <img src={"https://image.tmdb.org/t/p/w370_and_h556_bestv2"+item.poster_path} alt={item.title} />
                         <div className="tooltip-box">
                            tooltip
                         </div>
@@ -23,17 +31,17 @@ class Card extends Component {
                 </div>
                 <article>
                     <header>
-                        <div className="percent">78%</div>
+                        <div className="percent">{item.vote_average}%</div>
                         <div className="data-title">
-                            <a href="#" title="Viva - A Vida é uma Festa">Viva - A Vida é uma Festa</a>
-                            <span>27 de Outubro de 2017</span>
+                            <a href="#" title={item.vote_average}>{item.title}</a>
+                            <span><Data data={item.release_date} /></span>
                         </div>
                     </header>
                     <div className="overview">
-                        <p>Miguel é um menino de 12 anos que quer em ser um músico famoso, mas deve lidar sua família desaprova seu sonho. Determinado a virar o jogo, o jovem acaba desencadeando…</p>
+                        <p>{item.overview}</p>
                     </div>
                     <div className="view-more">
-                        <a href="#" title="Viva - A Vida é uma Festa">Mais informações</a>
+                        <a href={item.id} title={item.title}>Mais informações</a>
                     </div>
                 </article>
             </div>
