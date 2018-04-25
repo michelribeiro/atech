@@ -29,6 +29,9 @@ https://docs.npmjs.com/getting-started/what-is-npm
 - Javascript
   - Vanila JS
 
+## Link direto
+
+[Link para o teste](https://michelribeiro.github.io/atech/#/)
 
 ### OBS
 - O site não foi feito com react isomorphic devido ao curto tempo que tive. No entanto, utilizei boas práticas de componetização e automação. Sendo assim, não atende para boas práticas de SEO mesmo sendo uma tecnologia de ponta!
