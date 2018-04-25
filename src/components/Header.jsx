@@ -69,7 +69,7 @@ class Header extends Component {
                                     <li className="user">
                                         <a href="#">
                                             <div className="avatar">
-                                                <img src="http://via.placeholder.com/32x32?text=U" alt="User" />
+                                                <img src="https://via.placeholder.com/32x32?text=U" alt="User" />
                                             </div>
                                         </a>
                                     </li>
