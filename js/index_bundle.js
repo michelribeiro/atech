@@ -11854,7 +11854,7 @@ var Header = function (_Component) {
                                 ),
                                 _react2.default.createElement(
                                     "a",
-                                    { href: "/atech" },
+                                    { href: "/atech/#/" },
                                     _react2.default.createElement("img", { src: "https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg", title: "The MovieDB", alt: "The MovieDB", width: "91", height: "81" })
                                 ),
                                 _react2.default.createElement(
@@ -11956,7 +11956,7 @@ var Header = function (_Component) {
                                             { className: "logo" },
                                             _react2.default.createElement(
                                                 "a",
-                                                { href: "/atech" },
+                                                { href: "/atech/#/" },
                                                 _react2.default.createElement("img", { src: "https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg", title: "The MovieDB", alt: "The MovieDB", width: "91", height: "81" }),
                                                 _react2.default.createElement(
                                                     "span",

@@ -495,7 +495,10 @@ main.home {
       .detailMovie .custom_bg .containerMain section {
         display: flex;
         align-items: flex-start;
-        flex-wrap: nowrap; }
+        flex-wrap: wrap; }
+        @media screen and (min-width: 769px) {
+          .detailMovie .custom_bg .containerMain section {
+            flex-wrap: nowrap; } }
         .detailMovie .custom_bg .containerMain section .poster {
           height: 450px; }
           .detailMovie .custom_bg .containerMain section .poster img {
