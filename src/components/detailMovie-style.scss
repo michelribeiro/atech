@@ -35,7 +35,10 @@
             section {
                 display: flex;
                 align-items: flex-start;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
+                @media screen and(min-width: 769px) {
+                    flex-wrap: nowrap;
+                }
 
                 .poster {
                     height: 450px;
