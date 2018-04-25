@@ -149,6 +149,11 @@
                             li {
                                 width: 33%;
                                 padding-bottom: 20px;
+                                .name {
+                                    font-weight: 600;
+                                    padding-bottom: 5px;
+                                    display: block;
+                                }
                             }
                         }
                     }

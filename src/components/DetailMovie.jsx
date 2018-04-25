@@ -113,12 +113,15 @@ class DetailMovie extends Component {
                                         <ul className="peoples">
                                             {
                                                 this.state.apiResults.crew.map((item, key) => {
-                                                    return(
-                                                        <li key={key}>
-                                                            <p className="name">{item.name}</p>
-                                                            <p>{item.job}</p>
-                                                        </li>
-                                                    )
+                                                    if(key <4) {
+                                                        return(
+                                                            <li key={key}>
+                                                                <p className="name">{item.name}</p>
+                                                                <p>{item.job}</p>
+                                                            </li>
+                                                            
+                                                        )
+                                                    }
                                                 })
                                             }
                                             
