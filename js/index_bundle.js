@@ -11793,9 +11793,11 @@ var Header = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
         _this.state = {
-            isTop: true
+            isTop: true,
+            ativaMenu: false
         };
         _this.renderScroll = _this.renderScroll.bind(_this);
+        _this.showMenu = _this.showMenu.bind(_this);
         return _this;
     }
 
@@ -11818,6 +11820,15 @@ var Header = function (_Component) {
             document.removeEventListener('scroll', this.renderScroll);
         }
     }, {
+        key: "showMenu",
+        value: function showMenu() {
+            this.setState(function (prevState) {
+                return {
+                    ativaMenu: !prevState.ativaMenu
+                };
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
 
@@ -11834,145 +11845,21 @@ var Header = function (_Component) {
                             "div",
                             { className: "sub_media" },
                             _react2.default.createElement(
-                                "ul",
-                                { className: "small right" },
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        "Apps"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        "F\xF3runs"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        "Placar de colaboradores"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        "Contribua"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        "API"
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    "li",
-                                    null,
-                                    _react2.default.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        "Suporte"
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
                                 "div",
-                                { className: "left" },
+                                { className: "onlyMobile" },
+                                _react2.default.createElement(
+                                    "p",
+                                    { onClick: this.showMenu.bind(this, true) },
+                                    _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "menu-hamburger" })
+                                ),
+                                _react2.default.createElement(
+                                    "a",
+                                    { href: "/" },
+                                    _react2.default.createElement("img", { src: "https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg", title: "The MovieDB", alt: "The MovieDB", width: "91", height: "81" })
+                                ),
                                 _react2.default.createElement(
                                     "ul",
                                     { className: "primary" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        { className: "logo" },
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "/" },
-                                            _react2.default.createElement("img", { src: "https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg", title: "The MovieDB", alt: "The MovieDB", width: "91", height: "81" }),
-                                            _react2.default.createElement(
-                                                "span",
-                                                { className: "title" },
-                                                "The Movie DB"
-                                            )
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#" },
-                                            "Explorar"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#" },
-                                            "Filmes"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#" },
-                                            "S\xE9ries"
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#" },
-                                            "Pessoas"
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                "div",
-                                { className: "right" },
-                                _react2.default.createElement(
-                                    "ul",
-                                    { className: "primary" },
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#" },
-                                            _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "plus" })
-                                        )
-                                    ),
-                                    _react2.default.createElement(
-                                        "li",
-                                        null,
-                                        _react2.default.createElement(
-                                            "a",
-                                            { href: "#" },
-                                            _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "globe" })
-                                        )
-                                    ),
                                     _react2.default.createElement(
                                         "li",
                                         null,
@@ -11992,6 +11879,174 @@ var Header = function (_Component) {
                                                 "div",
                                                 { className: "avatar" },
                                                 _react2.default.createElement("img", { src: "https://via.placeholder.com/32x32?text=U", alt: "User" })
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                "div",
+                                { className: this.state.ativaMenu ? "navMobile active" : "navMobile" },
+                                _react2.default.createElement(
+                                    "ul",
+                                    { className: "small right" },
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            "Apps"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            "F\xF3runs"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            "Placar de colaboradores"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            "Contribua"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            "API"
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        "li",
+                                        null,
+                                        _react2.default.createElement(
+                                            "a",
+                                            { href: "#" },
+                                            "Suporte"
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "left" },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { className: "primary" },
+                                        _react2.default.createElement(
+                                            "li",
+                                            { className: "logo" },
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "/" },
+                                                _react2.default.createElement("img", { src: "https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg", title: "The MovieDB", alt: "The MovieDB", width: "91", height: "81" }),
+                                                _react2.default.createElement(
+                                                    "span",
+                                                    { className: "title" },
+                                                    "The Movie DB"
+                                                )
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                "Explorar"
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                "Filmes"
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                "S\xE9ries"
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                "Pessoas"
+                                            )
+                                        )
+                                    )
+                                ),
+                                _react2.default.createElement(
+                                    "div",
+                                    { className: "right" },
+                                    _react2.default.createElement(
+                                        "ul",
+                                        { className: "primary" },
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "plus" })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "globe" })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            null,
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: "bell" })
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            "li",
+                                            { className: "user" },
+                                            _react2.default.createElement(
+                                                "a",
+                                                { href: "#" },
+                                                _react2.default.createElement(
+                                                    "div",
+                                                    { className: "avatar" },
+                                                    _react2.default.createElement("img", { src: "https://via.placeholder.com/32x32?text=U", alt: "User" })
+                                                )
                                             )
                                         )
                                     )
