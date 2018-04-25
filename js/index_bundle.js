@@ -7681,7 +7681,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var paths = exports.paths = {
-  PATH_BASE: "http://api.themoviedb.org/3/",
+  PATH_BASE: "https://api.themoviedb.org/3/",
   PATH_DISCOVER: "discover/movie",
   MOVIE: "movie/",
   KEY: "?api_key=2b9dda68a6100edd23850576cdb50d06",
@@ -11991,7 +11991,7 @@ var Header = function (_Component) {
                                             _react2.default.createElement(
                                                 "div",
                                                 { className: "avatar" },
-                                                _react2.default.createElement("img", { src: "http://via.placeholder.com/32x32?text=U", alt: "User" })
+                                                _react2.default.createElement("img", { src: "https://via.placeholder.com/32x32?text=U", alt: "User" })
                                             )
                                         )
                                     )
