@@ -14,7 +14,13 @@ https://docs.npmjs.com/getting-started/what-is-npm
 - No terminal vá para a pasta do projeto
 - digite `npm run dev`
 
+## Start project - Build para produção
+- No terminal vá para a pasta do projeto
+- digite `npm run deploy`
+- Será gerado a pasta ./dist que terá todo o projeto já pronto para ser hospedado
+
 ## Tecnologias
+- Webpack
 - React
   - Component
 - SASS
@@ -25,3 +31,4 @@ https://docs.npmjs.com/getting-started/what-is-npm
 
 
 ### OBS
+- O site não foi feito com react isomorphic devido ao curto tempo que tive. No entanto, utilizei boas práticas de componetização e automação.

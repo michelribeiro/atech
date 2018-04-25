@@ -42,7 +42,7 @@ componentDidMount() {
     return (
       <div>
         <Header />
-        <DetailMovie list={this.state.apiResults} />
+        <DetailMovie credits={this.props.params} list={this.state.apiResults} />
         <Footer />
       </div>
     );

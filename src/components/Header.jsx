@@ -12,14 +12,22 @@ class Header extends Component {
         this.state = {
             isTop: true
         }
+        this.renderScroll = this.renderScroll.bind(this);
     }
+    
     componentDidMount() {
-        document.addEventListener('scroll', () => {
-            const isTop = window.scrollY < 2;
+        document.addEventListener('scroll', this.renderScroll)
+    }
+
+    renderScroll() {
+        const isTop = window.scrollY < 2;
             if (isTop !== this.state.isTop) {
-                this.setState({ isTop })
-            }
-        })
+            this.setState({ isTop })
+        }
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('scroll', this.renderScroll)
     }
     
     render() {
