@@ -8,6 +8,11 @@
         margin: 0 auto;
     }
 
+    .no-results {
+        display: block;
+        padding: 50px 0 50px;
+    }
+
     .containerList {
         display: flex;
         flex-wrap: wrap;

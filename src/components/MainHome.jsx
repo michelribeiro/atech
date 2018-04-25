@@ -7,7 +7,7 @@ require("./mainHome-style")
 class MainHome extends Component {
 
     render() {
-        const {className, list} = this.props;
+        const {className, list, genres, filterGenre, selectedGenre} = this.props;
         return (
             <main className={className}>
                 <section className="main_content">
@@ -23,8 +23,8 @@ class MainHome extends Component {
                         </div>
                     </div>
                 </section>
-                <FormFilter />
-                <ListMovies list={list} />
+                <FormFilter genres={genres} filterGenre={filterGenre} />
+                <ListMovies list={list} selectedGenre={selectedGenre} />
             </main>
         )
     }

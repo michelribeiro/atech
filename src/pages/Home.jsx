@@ -10,12 +10,12 @@ class Home extends Component {
 
 
   render() {
-    const { className, list } = this.props;
-    console.log('>>>',list)
+    const { className, list, genres, filterGenre, selectedGenre } = this.props;
+
     return (
       <div className={className}>
         <Header />
-        <MainHome list={list} className="home" />
+        <MainHome list={list} genres={genres} selectedGenre={selectedGenre} filterGenre={filterGenre} className="home" />
         <Footer />
       </div>
     );

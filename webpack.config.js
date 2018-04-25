@@ -13,8 +13,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve('./dist'),
-    filename: 'index_bundle.js'
+    path: path.resolve('./dist/js'),
+    filename: 'js/index_bundle.js'
   },
   module: {
     loaders: [{
@@ -39,6 +39,6 @@ module.exports = {
   plugins: [
     HtmlWebpackPluginConfig,
     // new UglifyJSPlugin(),
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("css/styles.css")
   ]
 };

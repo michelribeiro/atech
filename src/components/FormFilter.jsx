@@ -4,6 +4,7 @@ import {
     ControlLabel,
     FormControl
 } from "react-bootstrap";
+// import Select from 'react-select';
 
 require('./formFilter-style')
 
@@ -13,9 +14,26 @@ class FormFilter extends Component {
         super(props);
     }
 
+    handleChange = (selectedOption) => {
+        this.setState({ selectedOption });
+        console.log(`Selected: ${selectedOption.label}`);
+    }
+    getSelectedFilter(e){
+        let options = e.target.options;
+        let value = [];
+        for (let i = 0, l = options.length; i < l; i++) {
+            if (options[i].selected) {
+            value.push(options[i].value);
+            }
+        }
+        this.props.filterGenre(value)
+    }
     render() {
+        const {genres, selectedOption} = this.props;
+        
         return (
             <div className="form-filter">
+                {}
                 <form>
                     <FormGroup controlId="formControlsSelect" bsSize="large">
                         <ControlLabel>Ano</ControlLabel>
@@ -31,10 +49,20 @@ class FormFilter extends Component {
                             <option value="2017">2017</option>
                         </FormControl>
                     </FormGroup>
+
                     <FormGroup controlId="formControlsSelect" bsSize="large">
                         <ControlLabel>Gêneros</ControlLabel>
-                        <FormControl type="text" placeholder="Filtrar por gêneros" />
+                        <FormControl onChange={this.getSelectedFilter.bind(this)} componentClass="select" multiple>
+                            {
+                                genres.genres.map((item, key) => {
+                                    return (
+                                        <option value={item.id} key={key}>{item.name}</option>
+                                    )
+                                })
+                            }
+                        </FormControl>
                     </FormGroup>
+                    
                     <FormGroup controlId="formControlsSelect" bsSize="large">
                         <ControlLabel>Palavras-chave</ControlLabel>
                         <FormControl type="text" placeholder="Filtrar por gêneros..." />

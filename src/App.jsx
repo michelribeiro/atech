@@ -19,11 +19,16 @@ class App extends Component {
         this.state = {
             apiResults: {
                 results: []
-            }
+            },
+            apiResultsGenre: {
+                genres: []
+            },
+            selectedFilter:[] 
         };
 
         this.setApi   = this.setApi.bind(this);
         this.fetchApi = this.fetchApi.bind(this);
+        this.getSelectedFilter = this.getSelectedFilter.bind(this);
     }
 
     setApi(result) {
@@ -31,15 +36,30 @@ class App extends Component {
     }
 
     fetchApi() {
-
         fetch(paths.PATH_BASE + paths.PATH_DISCOVER + paths.KEY)
         .then(response => response.json())
         .then(result => this.setApi(result))
         .catch(e => e);
     }
 
+    setApiGenre(genres) {
+        this.setState({apiResultsGenre: genres})
+    }
+
+    fetchApiGenre() {
+        fetch(paths.GENRE + paths.KEY)
+        .then(response => response.json())
+        .then(genres => this.setApiGenre(genres))
+        .catch(e => e);
+    }
+
     componentDidMount() {
         this.fetchApi()
+        this.fetchApiGenre()
+    }
+
+    getSelectedFilter(selectedFilter) {
+        this.setState({selectedFilter})
     }
 
     render() {
@@ -49,7 +69,7 @@ class App extends Component {
                 <HashRouter>
                     <div>
                         <Route exact path="/" render={(props) => (
-                            <Home list={this.state.apiResults} />
+                            <Home list={this.state.apiResults} selectedGenre={this.state.selectedFilter} filterGenre={this.getSelectedFilter} genres={this.state.apiResultsGenre} />
                         )} />
                         <Route exact path="/detail/:id" render={(props) => (
                             <Detail params={props.match.params} list={this.state.apiResults} />
