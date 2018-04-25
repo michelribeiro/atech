@@ -1,19 +1,27 @@
 # Teste para ATECH
 
-## Começar
-. Baixar o projeto do git
-. na linha de  comando na pasta do projeto rodar o comando `NPM INSTALL`
+## Start
+- Baixar o projeto do git
+- No terminal vá para a pasta do projeto
+- Digite o comando `NPM INSTALL`. Ele irá instalar os pacotes necessários do projeto.
 
-## Rodar o projeto local
-. no terminal vá para a pasta do projeto
-. digite `npm run dev`
+```
+https://docs.npmjs.com/getting-started/what-is-npm
+
+```
+
+## Start project - local
+- No terminal vá para a pasta do projeto
+- digite `npm run dev`
 
 ## Tecnologias
-. React
-. SASS
-. HTML
-. Javascript
+- React
+  - Component
+- SASS
+  - Estilo por componente
+- HTML
+- Javascript
+  - Vanila JS
 
 
 ### OBS
-'You have
