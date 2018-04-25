@@ -51,7 +51,7 @@ class Header extends Component {
                                     <Glyphicon glyph="menu-hamburger" />
                                 </p>
 
-                                <a href="/">
+                                <a href="/atech">
                                     <img src="https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" title="The MovieDB" alt="The MovieDB" width="91" height="81" />
                                 </a>
 
@@ -80,7 +80,7 @@ class Header extends Component {
                                 <div className="left">
                                     <ul className="primary">
                                         <li className="logo">
-                                            <a href="/">
+                                            <a href="/atech">
                                                 <img src="https://www.themoviedb.org/static_cache/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" title="The MovieDB" alt="The MovieDB" width="91" height="81" />
                                                 <span className="title">The Movie DB</span>
                                                 {/* <Glyphicon glyph="asterisk" /> */}
