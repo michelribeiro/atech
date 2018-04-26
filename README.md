@@ -7,7 +7,7 @@
 
 ## Para mais informações sobre NPM
 
-[COMO USAR O NPM](https://docs.npmjs.com/getting-started/what-is-npm)
+[NPM](https://docs.npmjs.com/getting-started/what-is-npm)
 
 
 ## Start project - local
@@ -25,6 +25,7 @@
 - React
   - Component
   - Route
+  - Bootstrap
 - SASS
   - Estilo por componente
 - HTML
