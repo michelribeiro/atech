@@ -5,10 +5,10 @@
 - No terminal vá para a pasta do projeto
 - Digite o comando `NPM INSTALL`. Ele irá instalar os pacotes necessários do projeto.
 
-```
-https://docs.npmjs.com/getting-started/what-is-npm
+## Para mais informações sobre NPM
 
-```
+[COMO USAR O NPM](https://docs.npmjs.com/getting-started/what-is-npm)
+
 
 ## Start project - local
 - No terminal vá para a pasta do projeto
@@ -20,9 +20,11 @@ https://docs.npmjs.com/getting-started/what-is-npm
 - Será gerado a pasta ./dist que terá todo o projeto já pronto para ser hospedado
 
 ## Tecnologias
+- SPA (Single Page Application)
 - Webpack
 - React
   - Component
+  - Route
 - SASS
   - Estilo por componente
 - HTML
