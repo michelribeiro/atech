@@ -4,7 +4,7 @@ class OnlyYear extends Component {
 
     year() {
       if(this.props.data) {
-        return this.props.data.split('-')[0]
+        return "("+this.props.data.split('-')[0]+")"
       }
     }
 

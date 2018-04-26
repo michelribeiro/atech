@@ -39,9 +39,8 @@ class DetailMovie extends Component {
     }
 
     render() {
-        console.log(paths.PATH_BASE + paths.MOVIE + this.props.credits.id +"/credits"+ paths.KEY)
+
         const {list} = this.props;
-       
         const bg = list.backdrop_path ? {
             backgroundImage: 'url(https://image.tmdb.org/t/p/w500/' + list.backdrop_path + ')'  
         } : {};
@@ -50,7 +49,10 @@ class DetailMovie extends Component {
             <div className="detailMovie">
                 <div className="custom_bg" style={bg}>
                     <div className="degrade">
-                        
+                        <div className="onlyMobile">
+                            <img src={"https://image.tmdb.org/t/p/w500/"+list.backdrop_path} />
+                        </div>
+
                         <div className="containerMain">
                             <section>
                                 <div className="poster">
@@ -62,48 +64,50 @@ class DetailMovie extends Component {
                                     </div>
                                 </div>
                                 <div className="header_poster_wrapper">
-                                    <div className="title">
-                                        <h2>
-                                            {list.title}
-                                            <span>
-                                                <OnlyYear data={list.release_date} />
-                                            </span>
-                                        </h2>
-                                    </div>
-                                    <ul className="actions">
-                                        <li className="boxPercent">
-                                        <div className="percent">
-                                            <Percent item={list.vote_average} />
+                                    <div className="bgMobile">
+                                        <div className="title">
+                                            <h2>
+                                                {list.title}
+                                                <span>
+                                                    <OnlyYear data={list.release_date} />
+                                                </span>
+                                            </h2>
                                         </div>
-                                        <p className="textAval">Avaliação dos usuários</p>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="radius">
-                                                <Glyphicon glyph="list" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="radius">
-                                                <Glyphicon glyph="heart" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="radius">
-                                                <Glyphicon glyph="bookmark" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="radius">
-                                                <Glyphicon glyph="star" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" className="text">
-                                                <Glyphicon glyph="play" />
-                                                Reproduzir trailer
-                                            </a>
-                                        </li>
-                                    </ul>
+                                        <ul className="actions">
+                                            <li className="boxPercent">
+                                            <div className="percent">
+                                                <Percent item={list.vote_average} />
+                                            </div>
+                                            <p className="textAval">Avaliação dos usuários</p>
+                                            </li>
+                                            <li className="hidden-mobile">
+                                                <a href="#" className="radius">
+                                                    <Glyphicon glyph="list" />
+                                                </a>
+                                            </li>
+                                            <li className="hidden-mobile">
+                                                <a href="#" className="radius">
+                                                    <Glyphicon glyph="heart" />
+                                                </a>
+                                            </li>
+                                            <li className="hidden-mobile">
+                                                <a href="#" className="radius">
+                                                    <Glyphicon glyph="bookmark" />
+                                                </a>
+                                            </li>
+                                            <li className="hidden-mobile">
+                                                <a href="#" className="radius">
+                                                    <Glyphicon glyph="star" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" className="text">
+                                                    <Glyphicon glyph="play" />
+                                                    Reproduzir trailer
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <div className="header_info">
                                         <h3>Sinopse</h3>
                                         <div className="overview">
