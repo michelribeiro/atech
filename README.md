@@ -2,14 +2,10 @@
 
 ## Start
 - Deverá ter o git local [Instalando o Git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
+- Deverá ter o NPM na maquina (é um gerenciador de pacotes de javascript) - [NPM](https://docs.npmjs.com/getting-started/what-is-npm)
 - Baixar o projeto do GITHUB com o comando - `git clone https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git`
 - No terminal vá para a pasta do projeto
 - Digite o comando `NPM INSTALL`. Ele irá instalar os pacotes necessários do projeto.
-
-## Para mais informações sobre NPM
-
-[NPM](https://docs.npmjs.com/getting-started/what-is-npm)
-
 
 ## Start project - local
 - No terminal vá para a pasta do projeto
