@@ -1,7 +1,8 @@
 # Teste para ATECH
 
 ## Start
-- Baixar o projeto do git
+- Deverá ter o git local [Instalando o Git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
+- Baixar o projeto com o comando - git clone https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git [link do git para o clone](https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git)
 - No terminal vá para a pasta do projeto
 - Digite o comando `NPM INSTALL`. Ele irá instalar os pacotes necessários do projeto.
 
