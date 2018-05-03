@@ -38,7 +38,7 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
-    // new UglifyJSPlugin(),
+    new UglifyJSPlugin(),
     new ExtractTextPlugin("css/styles.css")
   ]
 };
